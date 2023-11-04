@@ -6,8 +6,8 @@ import environ
 env = environ.Env()
 env.read_env()
 BOT_TOKEN = env('BOT_TOKEN')
-
-bot = commands.Bot(command_prefix='/')
+print(BOT_TOKEN)
+bot = commands.Bot(command_prefix='!')
 
 for file in os.listdir('./cogs'):
     if file.endswith('.py'):
